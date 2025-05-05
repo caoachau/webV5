@@ -7,10 +7,7 @@ import Login from "./pages/Login"
 import Home from "./pages/Home"
 import FileList from "./pages/FileList"
 import FileUpload from "./pages/FileUpload"
-// import FileDetails from "./pages/FileDetails"
-// import CourseList from "./pages/CourseList"
-// import CourseDetails from "./pages/CourseDetails"
-// import CourseCreate from "./pages/CourseCreate"
+
 import NotFound from "./pages/NotFound"
 
 // Components
