@@ -7,7 +7,6 @@ import Login from "./pages/Login"
 import Home from "./pages/Home"
 import FileList from "./pages/FileList"
 import FileUpload from "./pages/FileUpload"
-
 import NotFound from "./pages/NotFound"
 
 // Components
@@ -36,36 +35,17 @@ function App() {
         <Toaster position="top-right" />
         <Routes>
           <Route path="/login" element={<Login />} />
-
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-
-            <Route path="files">
-              <Route index element={<FileList />} />
-              <Route path=":id" element={<FileDetails />} />
-              <Route
-                path="upload"
-                element={
-                  <ProtectedRoute>
-                    <FileUpload />
-                  </ProtectedRoute>
-                }
-              />
-            </Route>
-
-            <Route path="courses">
-              <Route index element={<CourseList />} />
-              <Route path=":id" element={<CourseDetails />} />
-              <Route
-                path="create"
-                element={
-                  <ProtectedRoute>
-                    <CourseCreate />
-                  </ProtectedRoute>
-                }
-              />
-            </Route>
-
+            <Route path="files" element={<FileList />} />
+            <Route
+              path="upload"
+              element={
+                <ProtectedRoute>
+                  <FileUpload />
+                </ProtectedRoute>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
